@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change BG Color</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+         body {background-color: #FBF8CC;} 
+    </style>
+</head>
+<body>
+
+  <nav class="
+relative
+w-full
+flex flex-wrap
+items-center
+justify-between
+py-4
+bg-gray-100
+text-gray-500
+hover:text-gray-700
+focus:text-gray-700
+shadow-lg
+navbar navbar-expand-lg navbar-light
+">
+<div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+<button class="
+    navbar-toggler
+    text-gray-500
+    border-0
+    hover:shadow-none hover:no-underline
+    py-2
+    px-2.5
+    bg-transparent
+    focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
+  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+  class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <path fill="currentColor"
+    d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+  </path>
+</svg>
+</button>
+<div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
+<a class="text-xl text-black" href="#">CNG CLR</a>
+<!-- Left links -->
+<ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+  <li class="nav-item px-2">
+    <a class="nav-link active" aria-current="page" href="#"></a>
+  </li>
+
+</ul>
+<!-- Left links -->
+</div>
+<!-- Collapsible wrapper -->
+</div>
+  </nav>
+  
+    <div class="flex space-x-2 justify-center">
+        <button
+        id="button" 
+        type=   "button"
+        class=  "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+        inline-block px-6 py-2.5 bg-gray-200 text-gray-700 font-medium text-xs leading-tight 
+        uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg 
+        focus:outline-none focus:ring-0 active:bg-gray-400 active:text-gray-100 active:shadow-lg transition duration-150 ease-in-out">
+        Change color</button>
+      </div>
+    
+      <div class="flex justify-center mt-10">
+        <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+          <div class="py-2 px-6 border-b border-gray-300">
+            Current Color
+          </div>
+          <div class="p-3">
+            <p  id="currentColor" 
+            class="text-gray-700 text-base mb-4">
+            #BF8CC
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      
+<script>
+  
+    const coolors = [
+        "#FBF8CC",
+        "#FDE4CF",
+        "#FFCFD2",
+        "#FFCFD2",
+        "#CFBAF0",
+        "#A3C4F3",
+        "#90DBF4",
+        "#8EECF5",
+        "#98F5E1",
+        "#B9FBC0"
+    ];
+    
+    const button = document.getElementById('button');
+      button.addEventListener('click', () => {
+    
+      const randomnumber = Math.floor(Math.random() * coolors.length);
+      document.body.style.backgroundColor = coolors[randomnumber];
+      
+      let text = document.getElementById("currentColor").innerText;
+      document.getElementById("currentColor").innerText = coolors[randomnumber];
+    
+    }); 
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>      
+</body>
+</html>
