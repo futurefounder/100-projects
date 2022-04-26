@@ -11,7 +11,7 @@ function darkBG() {
  
  function getWeather( userCity ) {
   
-   const key = '948754e32cf7c2bc3e056e7892bab084';
+   const key = 'API_KEY';
    fetch('https://api.openweathermap.org/data/2.5/weather?id=' + userCity + '&appid=' + key)  
    .then(function(resp) { return resp.json() }) // Convert data to json
    .then(function(data) {
