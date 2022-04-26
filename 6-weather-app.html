@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/weather-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body id="main">
+
+        <header class="text-gray-600 body-font bg-gray-100">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+
+                        <div>
+          <div class="form-check">
+            <input 
+            onclick="lightBG()" 
+            class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" 
+            type="radio" 
+            name="flexRadioDefault" 
+            id="flexRadioDefault1" checked>
+            <label class="form-check-label inline-block text-gray-500" for="flexRadioDefault1">
+            Light
+            </label>
+          </div>
+          <div class="form-check">
+            <input 
+            onclick="darkBG()" 
+            class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" 
+            type="radio" 
+            name="flexRadioDefault" 
+            id="flexRadioDefault2">
+            <label class="form-check-label inline-block text-gray-500" for="flexRadioDefault2">
+            Dark
+            </label>
+          </div>
+        </div>
+              </nav>
+              <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+                <span class="ml-3 text-3xl font-black">Sweets Weather</span>
+              </a>
+              <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+
+              </div>                
+                </div>
+            </div>
+          </header>
+
+      <div id="weather">
+        <div id="description"></div>
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+      </div>
+      <div class="w-full max-w-sm mx-auto mt-16 bg-transparent border rounded-md dark:border-gray-700 focus-within:border-green-400 focus-within:ring focus-within:ring-green-300 dark:focus-within:border-green-300 focus-within:ring-opacity-40">
+
+      <form class="flex flex-col md:flex-row bg-gray-600 ">
+        <input 
+          id="city"
+          type="text" 
+          placeholder="Enter Your Location" 
+          class="flex-1 h-10 px-4 py-2 m-1 text-white placeholder-gray-100 bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0" /> 
+        
+        <button 
+          onclick="getWeather(userCity)"
+          type="button" 
+          class="h-10 px-8 py-2 m-1 text-white transition-colors duration-200 transform bg-green-500 rounded-md hover:bg-green-400 focus:outline-none focus:bg-green-400">
+          Go
+        </button>
+    </form></div>
+
+<script src="/src/weather-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>   
+</body>
+</html>

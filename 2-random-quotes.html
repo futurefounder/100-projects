@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {background-color: #8EECF5;}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],  
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        svg {
+            vertical-align:-0.1875em;}
+    </style>
+</head>
+<body>
+    <div class="flex justify-center items-center h-screen">
+        <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg ">
+          <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fG1vdW50YWlufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+          <div class="p-6 flex flex-col justify-start ">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">Random Quote</h5>
+            <p id="quoteDisplay" class="text-gray-700 text-base mb-4 italic">
+              "This is a wider card with supporting text below as a natural lead-in to additional content. 
+              This content is a little bit longer.""
+            </p>
+            <p id="Author" class="text-gray-600 text-xs">Name</p>
+            <br>
+            <button 
+            id="newQuote"
+            type="button" 
+            class="inline-block px-6 py-2.5 bg-gray-100 text-purple-800 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out">
+            🔄 New Quote</button>
+             
+            
+          </div>
+        </div>
+    </div>
+
+    <script>
+      
+        const authorsQuote = [
+            "Dalai Lama",
+            "John Lennon",
+            "Mae West",
+            "Albert Einstein"
+        ];
+
+        const quote = [
+            "“The purpose of our lives is to be happy.”",
+            "“Life is what happens when you’re busy making other plans.”",
+            "“You only live once, but if you do it right, once is enough.”",
+            "“If you want to live a happy life, tie it to a goal, not to people or things.”"
+        ];
+
+        const button = document.getElementById('newQuote');
+        button.addEventListener('click', () => {
+        
+        const randomNumber = Math.floor(Math.random() * authorsQuote.length);
+        
+        document.getElementById("Author").innerText = authorsQuote[randomNumber];
+
+        const changeQuote = Math.floor(Math.random() * quote.length);
+        document.getElementById("quoteDisplay").innerText = quote[randomNumber];
+        
+    
+    }); 
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script> 
+</body>
+</html>

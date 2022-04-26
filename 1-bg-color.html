@@ -102,7 +102,7 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
 
       
 <script>
-  
+      
     const coolors = [
         "#FBF8CC",
         "#FDE4CF",
@@ -117,13 +117,13 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
     ];
     
     const button = document.getElementById('button');
-      button.addEventListener('click', () => {
+    button.addEventListener('click', () => {
     
-      const randomnumber = Math.floor(Math.random() * coolors.length);
-      document.body.style.backgroundColor = coolors[randomnumber];
-      
-      let text = document.getElementById("currentColor").innerText;
-      document.getElementById("currentColor").innerText = coolors[randomnumber];
+    const randomnumber = Math.floor(Math.random() * coolors.length);
+    document.body.style.backgroundColor = coolors[randomnumber];
+    
+    let text = document.getElementById("currentColor").innerText;
+    document.getElementById("currentColor").innerText = coolors[randomnumber];
     
     }); 
 

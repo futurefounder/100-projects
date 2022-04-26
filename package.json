@@ -1,0 +1,19 @@
+{
+  "name": "js-test-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futurefounder/100-projects.git"
+  },
+  "author": "Jesse Khala",
+  "license": "(ISC)",
+  "bugs": {
+    "url": "https://github.com/futurefounder/100-projects/issues"
+  },
+  "homepage": "https://github.com/futurefounder/100-projects#readme"
+}
